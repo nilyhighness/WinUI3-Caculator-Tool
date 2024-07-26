@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="BasicNavigation.Page3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BasicNavigation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="10" Orientation="Vertical">
+            <TextBlock Text="标准计算"  FontWeight="Bold" Margin="10" ></TextBlock>
+            <TextBox x:Name="text1" Header="整数排序" Margin="10">
+                <ToolTipService.ToolTip>
+                    <ToolTip Content="输入待排序的整数"/>
+                </ToolTipService.ToolTip>
+            </TextBox>
+            <Button x:Name="button1" Content="确定" HorizontalAlignment="Right" Click="button1_Click" Background="#FFB900" Foreground="White">
+                <Button.RenderTransform>
+                    <TranslateTransform X="-10" Y="0"/>
+                </Button.RenderTransform>
+            </Button>
+            <TextBox x:Name="t2" Text="waiting for input" Margin="10"/>
+            
+            
+            <TextBox x:Name="upperlimit" Header="质数筛" Margin="10">
+                <ToolTipService.ToolTip>
+                    <ToolTip Content="输入上限"/>
+                </ToolTipService.ToolTip>
+            </TextBox>
+            <Button x:Name="button2" Content="确定" HorizontalAlignment="Right" Click="button2_Click"  Background="#FFB900" Foreground="White">
+                <Button.RenderTransform>
+                    <TranslateTransform X="-10" Y="0"/>
+                </Button.RenderTransform>
+            </Button>
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <TextBox x:Name="output" Text="waiting for input" Margin="10" AcceptsReturn="True" TextWrapping="Wrap" MaxLength="0"/>
+            </ScrollViewer>
+        </StackPanel>
+
+    </Grid>
+</Page>
